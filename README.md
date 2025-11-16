@@ -1,12 +1,14 @@
 # My-Local-Mate
 
 # Folder Structure
+```
 Frontend/
 │
 ├── public/
 │
 ├── src/
 │   ├── assets/
+│   │   └── (images, icons, static files)
 │   │
 │   ├── components/
 │   │   ├── Footer.jsx
@@ -33,8 +35,8 @@ Frontend/
 │   │   └── Services.jsx
 │   │
 │   ├── App.css
-│   └── App.jsx
-    └── index.html
+│   ├── App.jsx
+│   └── main.jsx
 │
 └── index.html
-
+```
