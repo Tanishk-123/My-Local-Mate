@@ -1,6 +1,6 @@
 import React from "react";
 import { useSearchParams } from "react-router-dom";
-import { useData } from "../contexts/DataContext";
+import { useData } from "../hooks/useData";
 import ServiceCard from "../components/ServiceCard";
 
 export default function Services(){

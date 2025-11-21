@@ -156,7 +156,7 @@ const Home = () => {
           marginTop: "2rem",
         }}
       >
-        <p>© {new Date().getFullYear()} Local Service Finder. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Local Service Finder. All rights reserved.</p>  
       </footer>
     </div>
   );

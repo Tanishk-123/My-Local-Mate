@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaStar, FaRegStar, FaUserCircle } from "react-icons/fa";
-import { useData } from "../contexts/DataContext";
-import { useAuth } from "../contexts/AuthContext";
+import { useData } from "../hooks/useData";
+import { useAuth } from "../hooks/useAuth";
 import { v4 as uuidv4 } from "uuid";
 
 export default function Reviews() {

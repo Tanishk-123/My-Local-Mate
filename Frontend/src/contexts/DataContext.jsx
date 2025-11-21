@@ -1,7 +1,7 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useState, useEffect } from "react";
 import sample from "../data/services";
 
-const DataContext = createContext();
+export const DataContext = createContext();
 
 export function DataProvider({ children }){
   const [services, setServices] = useState(() => {
@@ -19,10 +19,22 @@ export function DataProvider({ children }){
 
   const addBooking = (b) => setBookings(prev => [b, ...prev]);
   const addReviewToService = (serviceId, review) => {
-    setServices(prev => prev.map(s => s.id === serviceId ? { ...s, reviews: [review, ...(s.reviews||[])], rating: Math.round(((s.rating*(s.reviews?.length||0)) + review.rating) / ((s.reviews?.length||0)+1) * 10)/10 } : s));
+    setServices(prev => 
+      prev.map(s => s.id === serviceId ? 
+        { ...s,
+         reviews: [review, ...(s.reviews||[])],
+         rating: Math.round(
+          ((s.rating*(s.reviews?.length||0)) + review.rating) /
+          ((s.reviews?.length||0)+1) *
+           10
+          ) / 10 
+        }
+         : s
+        )
+      );
   };
 
   return <DataContext.Provider value={{ services, bookings, addBooking, addReviewToService }}>{children}</DataContext.Provider>;
 }
 
-export const useData = () => useContext(DataContext);
+

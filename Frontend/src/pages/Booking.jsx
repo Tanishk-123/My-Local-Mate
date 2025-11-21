@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { useData } from "../contexts/DataContext";
-import { useAuth } from "../contexts/AuthContext";
+import { useData } from "../hooks/useData";
+import { useAuth } from "../hooks/useAuth";
 import { v4 as uuidv4 } from "uuid";
 import { motion } from "framer-motion";
 import { FaCalendarAlt, FaClipboardCheck, FaClock, FaUserCircle } from "react-icons/fa";

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaSearch, FaMapMarkerAlt, FaStar } from "react-icons/fa";
-import { useData } from "../contexts/DataContext";
+import { useData } from "../hooks/useData";
 
 export default function Services() {
   const { services } = useData();
